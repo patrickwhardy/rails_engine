@@ -129,6 +129,32 @@
         null,
         null
       ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/invoices_finder_controller.rb": [
+        1,
+        1,
+        6,
+        1,
+        null,
+        5,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        5,
+        null,
+        null,
+        null
+      ],
       "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/invoices_controller.rb": [
         1,
         1,
@@ -234,6 +260,6 @@
         0
       ]
     },
-    "timestamp": 1464813956
+    "timestamp": 1464814881
   }
 }

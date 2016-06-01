@@ -42,6 +42,7 @@ RSpec.describe "GET /api/v1/customers/find?param=value" do
 
   context "find by last_name" do
     it "returns a single customer with last name exact match" do
+      customer2 = create(:customer, last_name: "Hardy")
       customer1 = create(:customer, last_name: "John")
 
       get "/api/v1/customers/find?last_name=John"
