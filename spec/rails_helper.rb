@@ -81,6 +81,12 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
+module Helpers
+  def format_price(price)
+    "#{format("%.2f", price/100.0)}"
+  end
+end
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
