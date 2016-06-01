@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-01T14:05:18-06:00">2016-06-01T14:05:18-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-01T14:45:56-06:00">2016-06-01T14:45:56-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">75.0%</span></span>
+    (<span class="covered_percent"><span class="red">77.42%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.89
+       <span class="green">
+         1.04
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>20</b> files in total.
-    <b>116</b> relevant lines. 
-    <span class="green"><b>87</b> lines covered</span> and
-    <span class="red"><b>29</b> lines missed </span>
+    <b>124</b> relevant lines. 
+    <span class="green"><b>96</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#5c3118c96cc7c0626e1343c3b10857c44882e3fd" class="src_link" title="app/controllers/api/v1/customers_finder_controller.rb">app/controllers/api/v1/customers_finder_controller.rb</a></td>
-        <td class="yellow strong">87.5 %</td>
-        <td>17</td>
-        <td>8</td>
-        <td>7</td>
-        <td>1</td>
-        <td>2.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>29</td>
+        <td>16</td>
+        <td>16</td>
+        <td>0</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -259,20 +259,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">60.27%</span></span>
+    (<span class="covered_percent"><span class="red">65.43%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.77
+       <span class="green">
+         1.01
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>10</b> files in total.
-    <b>73</b> relevant lines. 
-    <span class="green"><b>44</b> lines covered</span> and
-    <span class="red"><b>29</b> lines missed </span>
+    <b>81</b> relevant lines. 
+    <span class="green"><b>53</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -320,12 +320,12 @@
       
       <tr>
         <td class="strong"><a href="#5c3118c96cc7c0626e1343c3b10857c44882e3fd" class="src_link" title="app/controllers/api/v1/customers_finder_controller.rb">app/controllers/api/v1/customers_finder_controller.rb</a></td>
-        <td class="yellow strong">87.5 %</td>
-        <td>17</td>
-        <td>8</td>
-        <td>7</td>
-        <td>1</td>
-        <td>2.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>29</td>
+        <td>16</td>
+        <td>16</td>
+        <td>0</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -1022,11 +1022,11 @@
         <div class="source_table" id="5c3118c96cc7c0626e1343c3b10857c44882e3fd">
   <div class="header">
     <h3>app/controllers/api/v1/customers_finder_controller.rb</h3>
-    <h4><span class="yellow">87.5 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1054,49 +1054,49 @@
         <li class="covered" data-hits="7" data-linenumber="4">
           <span class="hits">7</span>
           
-          <code class="ruby">    respond_with Customer.find_by(permitted_params)</code>
+          <code class="ruby">    if params[:first_name]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      respond_with Customer.where(&quot;lower(first_name) = ?&quot;, params[:first_name].downcase).first</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    elsif params[:last_name]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
-          <code class="ruby">  def index</code>
+          <code class="ruby">      respond_with Customer.where(&quot;lower(last_name) = ?&quot;, params[:last_name].downcase).first</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">    respond_with Customer.where(&quot;lower(#{params.keys.first}) = ?&quot;, params.keys.first.downcase)</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      respond_with Customer.find_by(customer_params)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">private</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -1108,28 +1108,100 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">  def permitted_params</code>
+          <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="14">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="5" data-linenumber="14">
+          <span class="hits">5</span>
           
-          <code class="ruby">    params.permit(:id, :created_at, :updated_at)</code>
+          <code class="ruby">    if params[:first_name]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      respond_with Customer.where(&quot;lower(first_name) = ?&quot;, params[:first_name].downcase)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    elsif params[:last_name]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      respond_with Customer.where(&quot;lower(last_name) = ?&quot;, params[:last_name].downcase)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      respond_with Customer.where(customer_params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def customer_params</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="26">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    params.permit(:id, :created_at, :updated_at)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>

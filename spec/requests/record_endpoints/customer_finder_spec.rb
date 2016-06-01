@@ -17,6 +17,7 @@ RSpec.describe "GET /api/v1/customers/find?param=value" do
 
   context "find by first_name" do
     it "returns a single customer with first name exact match" do
+      customer0 = create(:customer, first_name: "Phil")
       customer1 = create(:customer, first_name: "John")
 
       get "/api/v1/customers/find?first_name=John"

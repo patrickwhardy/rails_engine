@@ -1,16 +1,28 @@
 class Api::V1::CustomersFinderController < Api::BaseController
 
   def show
-    respond_with Customer.find_by(permitted_params)
+    if params[:first_name]
+      respond_with Customer.where("lower(first_name) = ?", params[:first_name].downcase).first
+    elsif params[:last_name]
+      respond_with Customer.where("lower(last_name) = ?", params[:last_name].downcase).first
+    else
+      respond_with Customer.find_by(customer_params)
+    end
   end
 
   def index
-    respond_with Customer.where("lower(#{params.keys.first}) = ?", params.keys.first.downcase)
+    if params[:first_name]
+      respond_with Customer.where("lower(first_name) = ?", params[:first_name].downcase)
+    elsif params[:last_name]
+      respond_with Customer.where("lower(last_name) = ?", params[:last_name].downcase)
+    else
+      respond_with Customer.where(customer_params)
+    end
   end
 
 private
 
-  def permitted_params
+  def customer_params
     params.permit(:id, :created_at, :updated_at)
   end
 
