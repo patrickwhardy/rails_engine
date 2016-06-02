@@ -12,6 +12,15 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/models/invoice_item.rb": [
@@ -31,6 +40,10 @@
         1,
         null,
         1,
+        null,
+        1,
+        2,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/models/item.rb": [
@@ -40,6 +53,19 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/models/merchant.rb": [
@@ -51,6 +77,19 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/models/transaction.rb": [
@@ -58,6 +97,96 @@
         1,
         null,
         1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/customers_favorite_merchants_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/base_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/application_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/lib/application_responder.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/items_best_days_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/serializers/item_best_day_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/items_most_items_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/serializers/item_serializer.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        37,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/merchants_revenues_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/serializers/merchant_revenue_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/merchants_favorite_customers_controller.rb": [
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/customers_finder_controller.rb": [
@@ -87,33 +216,6 @@
         null,
         1,
         6,
-        null,
-        null,
-        null
-      ],
-      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/base_controller.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/application_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/lib/application_responder.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         null,
         null
@@ -200,7 +302,7 @@
         1,
         null,
         1,
-        28,
+        31,
         null,
         null
       ],
@@ -261,16 +363,6 @@
         1,
         10,
         10,
-        null,
-        null
-      ],
-      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/serializers/item_serializer.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        33,
         null,
         null
       ],
@@ -477,8 +569,15 @@
         1,
         null,
         null
+      ],
+      "/Users/patrickwhardy/Turing/3module/projects/rails_engine/app/controllers/api/v1/items_most_revenues_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1464880673
+    "timestamp": 1464890321
   }
 }
