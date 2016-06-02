@@ -4,8 +4,8 @@ class CreateTransactions < ActiveRecord::Migration
       t.references :invoice, index: true, foreign_key: true
       t.string :credit_card_number
       t.string :result
-      t.datetime :created_at
-      t.datetime :updated_at
+
+      t.timestamps null: false
     end
   end
 end

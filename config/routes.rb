@@ -7,6 +7,8 @@ Rails.application.routes.draw do
           get 'find_all', to: "merchants_finder#index"
           get 'random', to: "merchants_random#show"
           get 'revenue', to: 'merchants_total_revenues#show'
+          get 'most_revenue', to: "merchants_most_revenues#index"
+          get 'most_items', to: "merchants_most_items#index"
         end
         member do
           get 'items', to: "merchants_items#index"

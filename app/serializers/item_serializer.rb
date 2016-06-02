@@ -1,6 +1,6 @@
 class ItemSerializer < ActiveModel::Serializer
   attributes :id, :name, :description, :unit_price,
-             :merchant_id, :created_at, :updated_at
+             :merchant_id
 
   def unit_price
     "#{format("%.2f", object.unit_price/100.0)}"
