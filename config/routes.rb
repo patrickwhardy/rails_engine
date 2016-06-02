@@ -21,7 +21,12 @@ Rails.application.routes.draw do
         end
       end
       resources :transactions, only: [:index, :show]
-      resources :items, only: [:index, :show]
+      resources :items, only: [:index, :show] do
+        collection do
+          get 'find', to: "items_finder#show"
+          get 'find_all', to: "items_finder#index"
+        end
+      end
     end
   end
 end
