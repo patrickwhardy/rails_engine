@@ -17,6 +17,19 @@ class Merchant < ActiveRecord::Base
   end
 
   def revenue(date)
-    revenue = invoices.paid.where(created_at: date).joins(:invoice_items).sum('quantity*unit_price')
+    if date.nil?
+      invoices.paid.joins(:invoice_items).sum('quantity*unit_price')
+    else
+      revenue = invoices.paid.where(created_at: date).joins(:invoice_items).sum('quantity*unit_price')
+    end
+  end
+
+  def customers_with_pending_invoices
+    customer_ids = invoices.pending.pluck(:customer_id)
+    Customer.find(customer_ids)
+  end
+
+  def self.total_revenues(date)
+    Invoice.paid.where(created_at: date).joins(:invoice_items).sum('quantity*unit_price')
   end
 end
