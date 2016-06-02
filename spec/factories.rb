@@ -47,4 +47,28 @@ FactoryGirl.define do
     created_at (DateTime.now - 1).to_s
     updated_at DateTime.now.to_s
   end
+
+  factory :merchant_with_items, parent: :merchant do |merchant|
+    items { build_list :item, Random.rand(1..6) }
+  end
+
+  factory :merchant_with_invoices, parent: :merchant do |merchant|
+    invoices { build_list :invoice, Random.rand(1..6) }
+  end
+
+  factory :customer_with_invoices, parent: :customer do |customer|
+    invoices { build_list :invoice, Random.rand(1..6) }
+  end
+
+  factory :invoice_with_transactions, parent: :invoice do |invoice|
+    transactions { build_list :transaction, Random.rand(1..6) }
+  end
+
+  factory :invoice_with_invoice_items, parent: :invoice do |invoice|
+    invoice_items { build_list :invoice_item, Random.rand(1..6) }
+  end
+
+  factory :item_with_invoice_items, parent: :item do |item|
+    invoice_items { build_list :invoice_item, Random.rand(1..6) }
+  end
 end
