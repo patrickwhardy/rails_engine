@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-01T21:09:23-06:00">2016-06-01T21:09:23-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-01T21:51:49-06:00">2016-06-01T21:51:49-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">83.13%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.27%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.97
+         2.0
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>23</b> files in total.
-    <b>166</b> relevant lines. 
-    <span class="green"><b>138</b> lines covered</span> and
+    <b>24</b> files in total.
+    <b>178</b> relevant lines. 
+    <span class="green"><b>150</b> lines covered</span> and
     <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -158,6 +158,16 @@
         <td>5</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cf77518e3710af45214516048531d51abb5b30e4" class="src_link" title="app/controllers/api/v1/merchants_finder_controller.rb">app/controllers/api/v1/merchants_finder_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>24</td>
+        <td>12</td>
+        <td>12</td>
+        <td>0</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -289,19 +299,19 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">77.24%</span></span>
+    (<span class="covered_percent"><span class="red">79.26%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.95
+         1.99
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>13</b> files in total.
-    <b>123</b> relevant lines. 
-    <span class="green"><b>95</b> lines covered</span> and
+    <b>14</b> files in total.
+    <b>135</b> relevant lines. 
+    <span class="green"><b>107</b> lines covered</span> and
     <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -426,6 +436,16 @@
         <td>5</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cf77518e3710af45214516048531d51abb5b30e4" class="src_link" title="app/controllers/api/v1/merchants_finder_controller.rb">app/controllers/api/v1/merchants_finder_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>24</td>
+        <td>12</td>
+        <td>12</td>
+        <td>0</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -2066,6 +2086,168 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="cf77518e3710af45214516048531d51abb5b30e4">
+  <div class="header">
+    <h3>app/controllers/api/v1/merchants_finder_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::MerchantsFinderController &lt; Api::BaseController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    if params[:name]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      respond_with Merchant.where(&quot;lower(name) = ?&quot;, params[:name].downcase).first</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      respond_with Merchant.find_by(invoice_item_params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="12">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    if params[:name]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      respond_with Merchant.where(&quot;lower(name) = ?&quot;, params[:name].downcase)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="15">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      respond_with Merchant.where(invoice_item_params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def invoice_item_params</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="22">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    params.permit(:id, :created_at, :updated_at)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
