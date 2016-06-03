@@ -88,4 +88,74 @@ RSpec.describe "GET /api/v1/transactions/find?param=value" do
       expect(transaction_json["result"]).to eq transaction1.result
     end
   end
+  context "find by updated_at date" do
+    it "returns a single transaction" do
+      transaction1 = create(:transaction)
+
+      get "/api/v1/transactions/find?updated_at=#{transaction1.updated_at}"
+
+      expect(response.status).to eq 200
+      transaction_json = JSON.parse(response.body)
+      expect(transaction_json["id"]).to eq transaction1.id
+      expect(transaction_json["invoice_id"]).to eq transaction1.invoice_id
+      expect(transaction_json["credit_card_number"]).to eq transaction1.credit_card_number
+      expect(transaction_json["result"]).to eq transaction1.result
+    end
+  end
+  context "find by updated_at date" do
+    it "returns a single transaction" do
+      transaction1 = create(:transaction)
+
+      get "/api/v1/transactions/find?updated_at=#{transaction1.updated_at}"
+
+      expect(response.status).to eq 200
+      transaction_json = JSON.parse(response.body)
+      expect(transaction_json["id"]).to eq transaction1.id
+      expect(transaction_json["invoice_id"]).to eq transaction1.invoice_id
+      expect(transaction_json["credit_card_number"]).to eq transaction1.credit_card_number
+      expect(transaction_json["result"]).to eq transaction1.result
+    end
+  end
+  context "find by updated_at date" do
+    it "returns a single transaction" do
+      transaction1 = create(:transaction)
+
+      get "/api/v1/transactions/find?updated_at=#{transaction1.updated_at}"
+
+      expect(response.status).to eq 200
+      transaction_json = JSON.parse(response.body)
+      expect(transaction_json["id"]).to eq transaction1.id
+      expect(transaction_json["invoice_id"]).to eq transaction1.invoice_id
+      expect(transaction_json["credit_card_number"]).to eq transaction1.credit_card_number
+      expect(transaction_json["result"]).to eq transaction1.result
+    end
+  end
+  context "find by updated_at date" do
+    it "returns a single transaction" do
+      transaction1 = create(:transaction)
+
+      get "/api/v1/transactions/find?updated_at=#{transaction1.updated_at}"
+
+      expect(response.status).to eq 200
+      transaction_json = JSON.parse(response.body)
+      expect(transaction_json["id"]).to eq transaction1.id
+      expect(transaction_json["invoice_id"]).to eq transaction1.invoice_id
+      expect(transaction_json["credit_card_number"]).to eq transaction1.credit_card_number
+      expect(transaction_json["result"]).to eq transaction1.result
+    end
+  end
+  context "find by updated_at date" do
+    it "returns a single transaction" do
+      transaction1 = create(:transaction)
+
+      get "/api/v1/transactions/find?result=#{transaction1.result}"
+
+      expect(response.status).to eq 200
+      transaction_json = JSON.parse(response.body)
+      expect(transaction_json["id"]).to eq transaction1.id
+      expect(transaction_json["invoice_id"]).to eq transaction1.invoice_id
+      expect(transaction_json["credit_card_number"]).to eq transaction1.credit_card_number
+      expect(transaction_json["result"]).to eq transaction1.result
+    end
+  end
 end
