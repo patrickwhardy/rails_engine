@@ -6,4 +6,12 @@ class Invoice < ActiveRecord::Base
   has_many :transactions
 
   validates_presence_of :merchant_id, :customer_id, :status
+
+  def self.paid
+    joins(:transactions).where(transactions: { result: "success" })
+  end
+
+  def self.pending
+    joins(:transactions).where(transactions: {result: "failed"})
+  end
 end
